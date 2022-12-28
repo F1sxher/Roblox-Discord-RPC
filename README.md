@@ -26,11 +26,19 @@ Show off your studio activities with ease & vast customization using my RPC clie
 
 ### Server
 
-- Go to the **[Github Page](https://github.com/fisherjacobc/Roblox-Discord-RPC)** and download the code.
-- Open in your IDE of choice (VS Code I prefer :smile:)
+- Go to the **[Github Page](https://github.com/fisherjacobc/Roblox-Discord-RPC)** and download the code **or use `git clone https://github.com/fisherjacobc/Roblox-Discord-RPC` if you know what you are doing**.
+
+#### Startup for Powershell
+
 - Open a command window and run the command `./SETUP`
   - This should install files and start automatically!
   - In the future, run `./START` to run it
+
+#### Startup for Command Prompt
+
+- Open a command window and run the command `SETUP.bat`
+  - This should install files and start automatically!
+  - In the future, run `START.bat` to run it
 
 ### Client
 
