@@ -24,6 +24,8 @@ Client.on('ready', () => {
     Client.setActivity(activity)
 });
 
+let serverRecently = false;
+
 HTTP.createServer((request, response) => {
     let data = {};
 
@@ -34,7 +36,10 @@ HTTP.createServer((request, response) => {
     request.on('end', async () => {
         if (data.RequestType == 'UPDATE') {
             try {
-                activity.details = data.WorkspaceDetails
+                if (data.EditMode && serverRecently) {
+                    response.statusCode = 200;
+                    return response.end();
+                }
                 let gameThumbRes = await fetch(`https://thumbnails.roblox.com/v1/games/icons?universeIds=${data.UniverseId}&returnPolicy=0&size=512x512&format=Png&isCircular=false`)
                 let gameThumb = (await gameThumbRes.json()).data[0].imageUrl
 
@@ -60,6 +65,7 @@ HTTP.createServer((request, response) => {
                     case "ACTIVE":
                         activity.smallImageKey = "active"
                         activity.smallImageText = "Active"
+                        activity.details = data.WorkspaceDetails
                         activity.largeImageKey = data.DisplayGameIcon ? gameThumb : "studio"
                         activity.largeImageText = data.DisplayGameName ? data.GameName : "Developing in Roblox Studio"
                         break;
@@ -123,6 +129,11 @@ HTTP.createServer((request, response) => {
                 console.log(`Received Updated Activity Status @ ${new Date().toTimeString()}`)
                 response.statusCode = 200;
                 response.end();
+                
+                if (!data.EditMode) serverRecently = true;
+                setTimeout(async () => {
+                    serverRecently = false
+                }, 5000)
             } catch (error) {
                 console.log(error)
             }
@@ -141,7 +152,7 @@ HTTP.createServer((request, response) => {
             Client.setActivity(activity)
 
             console.log(`Activity Status Disabled @ ${new Date().toTimeString()}`)
-            response.statusCode = 204;
+            response.statusCode = 200;
             response.end();
         }
     })
