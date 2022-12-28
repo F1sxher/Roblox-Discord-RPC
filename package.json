@@ -1,0 +1,23 @@
+{
+  "name": "roblox-discord-rpc",
+  "version": "1.0.0",
+  "description": "A package to display your Roblox Studio Presence",
+  "main": "src/server/index.js",
+  "scripts": {
+    "start": "node src/server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fisherjacobc/Roblox-Discord-RPC.git"
+  },
+  "author": "Jacob Fisher (fisherjacobc)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fisherjacobc/Roblox-Discord-RPC/issues"
+  },
+  "homepage": "https://github.com/fisherjacobc/Roblox-Discord-RPC#readme",
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "node-fetch": "^2.6.7"
+  }
+}
