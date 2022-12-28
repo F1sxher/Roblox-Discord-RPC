@@ -5,12 +5,19 @@ Show off your studio activities with ease & vast customization using my RPC clie
 ## Showcase
 
 - Developing
+
   ![](/showcase/developing.png)
+
 - Scripting + Current Team Create player count
+
   ![](/showcase/scripting_tc_player_count.png)
+
 - Busy
+
   ![](/showcase/busy.png)
+
 - Playtesting
+
   ![](/showcase/playtesting.png)
 
 ## Installation
