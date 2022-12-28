@@ -66,14 +66,14 @@ HTTP.createServer((request, response) => {
                     case "SCRIPTING":
                         activity.smallImageKey = "scripting"
                         activity.smallImageText = "Scripting"
-                        activity.details = undefined
+                        activity.details = data.ScriptingDetails
                         activity.largeImageKey = data.DisplayGameIcon ? gameThumb : "studio"
                         activity.largeImageText = data.DisplayGameName ? data.GameName : "Developing in Roblox Studio"
                         break;
                     case "TESTING":
                         activity.smallImageKey = "testing"
                         activity.smallImageText = "Testing"
-
+                        activity.details = undefined
                         activity.largeImageKey = data.DisplayGameIcon ? gameThumb : "studio"
                         activity.largeImageText = data.DisplayGameName ? data.GameName : "Testing in Roblox Studio"
 
