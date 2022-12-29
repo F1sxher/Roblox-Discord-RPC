@@ -65,6 +65,7 @@ Show off your studio activities with ease & vast customization using my RPC clie
 ## Special Thanks
 
 - ![](https://tr.rbxcdn.com/59eadbae63bf15b7554bf4854021d725/30/30/AvatarHeadshot/Png) [wdigit](https://www.roblox.com/users/87516258/profile)
+  - 🌟 Bug Squasher
   - Contributor
   - Tester
 
