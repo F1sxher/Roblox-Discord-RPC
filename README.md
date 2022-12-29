@@ -66,5 +66,7 @@ Show off your studio activities with ease & vast customization using my RPC clie
   - 🌟 Bug Squasher
   - Contributor
   - Tester
+- ![](https://tr.rbxcdn.com/56771223a2a3141566572f0bb92dc572/30/30/AvatarHeadshot/Png) hayper1919
+  - Contributor
 
 ## Thank you for any support, and suggest features/report bugs below! ⬇️
