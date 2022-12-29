@@ -4,7 +4,6 @@ const Config = require('./config');
 const Client = new DiscordRPC.Client({ transport: Config.transport });
 const HTTP = require('http');
 const fetch = require('node-fetch')
-
 let activity = {
     largeImageKey: 'studio',
     largeImageText: 'Developing in Roblox Studio',
@@ -24,10 +23,10 @@ Client.on('ready', () => {
     Client.setActivity(activity)
 });
 
-let serverRecently = false;
-
 HTTP.createServer((request, response) => {
     let data = {};
+    let lastServerRequest = 0;
+    let serverRecently = false;
 
     request.on('data', (reqData) => {
         data = JSON.parse(reqData);
@@ -40,6 +39,9 @@ HTTP.createServer((request, response) => {
                     response.statusCode = 200;
                     return response.end();
                 }
+                const thisServerRequest = new Date().getTime()
+                if (!data.EditMode) lastServerRequest = thisServerRequest; serverRecently = true;
+
                 let gameThumbRes = await fetch(`https://thumbnails.roblox.com/v1/games/icons?universeIds=${data.UniverseId}&returnPolicy=0&size=512x512&format=Png&isCircular=false`)
                 let gameThumb = (await gameThumbRes.json()).data[0].imageUrl
 
@@ -130,10 +132,12 @@ HTTP.createServer((request, response) => {
                 response.statusCode = 200;
                 response.end();
                 
-                if (!data.EditMode) serverRecently = true;
-                setTimeout(async () => {
-                    serverRecently = false
-                }, 5000)
+                if (!data.EditMode){
+                    setTimeout(async () => {
+                        console.log('THIS REQUEST: ' + thisServerRequest, "\nLAST REQUEST: " + lastServerRequest, '\n--------')
+                        if ((lastServerRequest == thisServerRequest) || lastServerRequest == 0) serverRecently = false; lastServerRequest = 0;
+                    }, 5000)
+                }
             } catch (error) {
                 console.log(error)
             }
