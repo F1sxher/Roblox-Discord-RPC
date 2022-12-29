@@ -124,7 +124,16 @@ HTTP.createServer((request, response) => {
                     activity.state = "Developing"
                 }
 
-                //TODO: BUTTONS AHHH!!!
+                activity.buttons = []
+               if (data.Buttons && data.Buttons.button0.title !== '' && data.Buttons.button0.url !== '') activity.buttons.push({
+                label: data.Buttons.button0.title,
+                url: data.Buttons.button0.url,
+               })
+               if (data.Buttons && data.Buttons.button1.title !== '' && data.Buttons.button1.url !== '') activity.buttons.push({
+                label: data.Buttons.button1.title,
+                url: data.Buttons.button1.url,
+               })
+               if (activity.buttons.length < 1) activity.buttons = undefined
 
                 //SET Activity
                 Client.setActivity(activity)
