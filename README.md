@@ -58,7 +58,6 @@ Show off your studio activities with ease & vast customization using my RPC clie
 
 ## Known Issues/TODO
 
-- Make a script to auto install/download server files
 - Scripting details doesnt update unless u go to no script, and then go to a script
 
 ## Special Thanks
