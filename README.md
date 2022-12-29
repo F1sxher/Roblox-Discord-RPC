@@ -58,8 +58,6 @@ Show off your studio activities with ease & vast customization using my RPC clie
 
 ## Known Issues/TODO
 
-- **Testing frequently switches back and forth between the active & testing statuses**
-  - There has been no found _permanent_ solution for this and is kind of an important feature
 - Buttons do not work yet
 - Make a script to auto install/download server files
 - Scripting details doesnt update unless u go to no script, and then go to a script
