@@ -22,21 +22,21 @@ Show off your studio activities with ease & vast customization using my RPC clie
 
 ## Installation
 
-**NODE.JS v16+, NPM v8+, AND GIT ARE _REQUIRED_**
+**[NODE.JS v16+, NPM v8+](https://nodejs.org/en/), AND [GIT](https://git-scm.com/downloads) ARE _REQUIRED_**
 
 ### Server
 
-- Go to the **[Github Page](https://github.com/fisherjacobc/Roblox-Discord-RPC)** and download the code **or use `git clone https://github.com/fisherjacobc/Roblox-Discord-RPC` if you know what you are doing**.
+- Go to the **[Github Page](https://github.com/fisherjacobc/Roblox-Discord-RPC/releases/latest)** and download the `SETUP.bat` file
 
 #### Startup for Powershell
 
-- Open a command window and run the command `./SETUP`
+- Open a command window and run the command `./SETUP` in the same directory you downloaded the file to
   - This should install files and start automatically!
   - In the future, run `./START` to run it
 
 #### Startup for Command Prompt
 
-- Open a command window and run the command `SETUP.bat`
+- Open a command window and run the command `SETUP.bat` in the same directory you downloaded the file to
   - This should install files and start automatically!
   - In the future, run `START.bat` to run it
 
@@ -53,12 +53,11 @@ Show off your studio activities with ease & vast customization using my RPC clie
 - **Studio Customization Widget**
 - **Timestamps**
 - **Player Count (developing/testing)**
-- **Up to _TWO_ fully customizable buttons (not working as of v1.0.0)**
+- **Up to _TWO_ fully customizable buttons (working v1.1.0+)**
 - **➕ more!**
 
 ## Known Issues/TODO
 
-- Buttons do not work yet
 - Make a script to auto install/download server files
 - Scripting details doesnt update unless u go to no script, and then go to a script
 
