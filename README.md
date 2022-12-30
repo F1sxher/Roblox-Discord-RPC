@@ -24,6 +24,10 @@ Show off your studio activities with ease & vast customization using my RPC clie
 
 **[NODE.JS v16+, NPM v8+](https://nodejs.org/en/), AND [GIT](https://git-scm.com/downloads) ARE _REQUIRED_**
 
+### Help Video
+Hope this helps!
+https://user-images.githubusercontent.com/72705185/210080314-fffe4adc-4b51-4370-9122-6b4542c7a72f.mp4
+
 ### Server
 
 - Go to the **[Github Page](https://github.com/fisherjacobc/Roblox-Discord-RPC/releases/latest)** and download the `SETUP.bat` file
